@@ -1,0 +1,95 @@
+<!-- <p>contacts works!</p>
+<div class="container">
+    <div class="text-center border mb-5 shadow rounded">
+        <h1>Contatti</h1>
+        <p>Contattami su email:<b>nicol4s8993&#64;gmail.com</b></p>
+        <p>Sono disponibile nelle piattaforme:</p>
+    </div>
+
+
+    <div class="list-group shadow">
+        <a href="//linkedin.com" target="_blank" class="list-group-item list-group-item-action d-flex gap-3 py-3">
+        <img src="../../../assets/linkedinlogo.png" width="32" height="32" class="rounded-circle flex-shrink-0 me-5">
+        <h3 class="mb-0">LinkedIn</h3>
+        </a>
+
+        <a href="//github.com" target="_blank" class="list-group-item list-group-item-action d-flex gap-3 py-3">
+        <img src="../../../assets/github.png" width="32" height="32" class="rounded-circle flex-shrink-0 me-5">
+        <h3 class="mb-0">GitHub</h3>
+        </a>
+
+        <a href="//youtube.com" target="_blank" class="list-group-item list-group-item-action d-flex gap-3 py-3">
+        <img src="../../../assets/youtube.png" width="32" height="32" class="rounded-circle flex-shrink-0 me-5">
+        <h3 class="mb-0">Youtube</h3>
+        </a>
+
+
+
+    </div>
+
+
+</div> -->
+
+
+<!-- funziona ma 15-07-2025 ho creato services e models e pipe per cercare di capire meglio le responsabilità -->
+
+
+<!-- <div class="container">
+  <div class="contentBox">
+    <div class="leftSide">
+      <h2>Contatti:</h2>
+      <ul>
+        <li>
+          <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+          <span class="text"> +39 388 78 90 555</span>
+        </li>
+        <li>
+          <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+          <span class="text">nicol4s8993&#64;gmail.com</span>
+        </li>
+        <li>
+          <span class="icon"><ion-icon name="logo-github"></ion-icon></span>
+          <a class="text" href="https://github.com/nicogitabs" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </li>
+        <li>
+          <span class="icon"><ion-icon name="logo-linkedin"></ion-icon></span>
+          <a class="text" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </li>
+        <li>
+          <span class="icon"><ion-icon name="logo-youtube"></ion-icon></span>
+          <a class="text" href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </li>
+        <li>
+          <span class="icon"><ion-icon name="pin-outline"></ion-icon></span>
+          <span class="text">Roma, Italia</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="contentBox">
+    <div class="leftSide">
+      <h2>Contatti:</h2>
+      <ul>
+        <li *ngFor="let contact of contacts">
+          <span class="icon"><ion-icon [name]="contact.icon"></ion-icon></span>
+
+          <!-- Se è un link -->
+          <ng-container *ngIf="contact.link; else textContent">
+            <a class="text" [href]="contact.link" target="_blank" rel="noopener noreferrer">
+              {{ contact.link | urlToLabel }}
+            </a>
+          </ng-container>
+
+          <!-- Se è solo testo -->
+          <ng-template #textContent>
+            <span class="text">{{ contact.text }}</span>
+          </ng-template>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

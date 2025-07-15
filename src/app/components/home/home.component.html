@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="row">
+        <!-- presentazione -->
+        <div class="col-lg-6 col-md-12 shadow border p-3">
+            <div class="text-center">
+                <h2>Presentazione</h2>
+                <img
+                id="profileImage"
+                 src="../../../assets/fotoprova.png"
+                  alt="profile photo" width="200px"
+                  width="200px"
+                    height="200px"
+                    class="rounded-circle bouncing-img">
+            </div>
+            <p>Aspirante sviluppatore software con una forte motivazione a crescere nel mondo dello sviluppo web
+                e
+                delle tecnologie moderne.
+                Dopo un percorso iniziale in ambito sanitario, ho deciso di seguire la mia vera passione per
+                l'informatica,
+                investendo in corsi mirati e progetti pratici.
+                <br><br>
+                Ho acquisito competenze solide in HTML, CSS, JavaScript, TypeScript e Angular, affiancate da conoscenze
+                backend in Java, Spring Boot e database MySQL.
+                Attualmente sto svolgendo uno stage come Frontend Developer, dove ho la possibilità di applicare
+                concretamente ciò che ho imparato e confrontarmi con dinamiche aziendali reali.
+                <br><br>
+                Sono una persona curiosa, precisa e orientata al miglioramento continuo, con buone capacità relazionali
+                e
+                propensione al lavoro di squadra.
+            </p>
+        </div>
+
+        <!-- Features Projects -->
+        <div class="col-lg-6 col-md-12 shadow border p-3">
+            <div class="text-center">
+                <h2>Progetti in sviluppo:</h2>
+                <!--Applico pipe per visualizzare in vetrina i maiuscoli-->
+                <h4>{{featureProject.name.toUpperCase()}}</h4>
+            </div>
+            <!-- <carousel>
+                <div *ngFor="let picture of featureProject.picture"> -->
+
+
+                    <!-- <slide><img src={{picture}} alt="immagine" style="display: block;width: 100%;"></slide> -->
+
+
+                    <!-- <slide>
+                        <div class="img-wrapper">
+                            <img [src]="picture" alt="immagine" />
+                        </div>
+                    </slide>
+                </div>
+            </carousel> -->
+
+
+            <!-- vetrina sotto la presentazione-modificato 14-7-2025 -->
+
+            <!-- <div class="scroll-container" (mouseenter)="pauseScroll()" (mouseleave)="startScroll()">
+  <div class="scroll-track" [ngStyle]="{ transform: 'translateX(' + scrollPosition + 'px)' }">
+    <div class="img-slide" *ngFor="let picture of featureProject.picture">
+      <img [src]="picture" alt="immagine" />
+    </div>
+  </div>
+</div> -->
+
+
+      <div class="scroll-container" (mouseenter)="pauseScroll()" (mouseleave)="startScroll()">
+        <div class="scroll-track" [style.transform]="'translateX(' + scrollPosition + 'px)'">
+          <div class="img-slide" *ngFor="let picture of featureProject.picture">
+            <img [src]="picture" alt="immagine" />
+          </div>
+          <!-- Duplico le immagini per looping fluido -->
+          <div class="img-slide" *ngFor="let picture of featureProject.picture">
+            <img [src]="picture" alt="immagine duplicata" />
+          </div>
+        </div>
+      </div>
+
+            <p class="mt2">{{featureProject.summary}}</p>
+            <p>Visita il portfolio per scoprire di più!</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+:host {
+  font-family: 'Poppins', sans-serif;
+}
+
+.jumbotron
+{
+    padding: 2rem 1rem;
+    background-color: #e9ecef;
+}
+

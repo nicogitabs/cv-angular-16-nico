@@ -1,0 +1,273 @@
+accordion-group::ng-deep .btn-link{
+    color: white;
+}
+accordion-group::ng-deep .card-header{
+    background-color: #007bff;
+}
+
+
+/*Lingue*/
+
+.lang-entry {
+  margin-bottom: 15px;
+}
+
+.lang-entry .text {
+  display: block;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.percent-bar {
+  background-color: #e0e0e0;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.percent-bar .fill {
+  height: 100%;
+  background-color: #3590d2;
+  transition: width 0.6s ease;
+}
+
+/* Optional: rounded progress look */
+.percent-bar .fill {
+  border-radius: 5px 0 0 5px;
+}
+
+
+
+
+
+
+/*esperienze lavorative*/
+
+.exp-entry {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-left: 4px solid #3590d2;
+  background-color: #fefefe;
+  border-radius: 4px;
+}
+
+.exp-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-weight: 600;
+  color: #3590d2;
+}
+
+.exp-body h4 {
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.exp-body p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Desktop: affianca header e corpo */
+@media screen and (min-width: 768px) {
+  .exp-entry {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .exp-header {
+    flex-direction: column;
+    min-width: 200px;
+  }
+
+  .exp-body {
+    flex: 1;
+    padding-left: 20px;
+  }
+}
+
+
+/* formazione*/
+.about.education {
+  padding: 10px 0;
+}
+
+.about.education .box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.about.education .year_company {
+  min-width: 180px;
+}
+
+.about.education .year_company h5 {
+  margin: 0;
+  color: #3590d2;
+  font-weight: 600;
+}
+
+.about.education .text h4 {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.edu-entry {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-left: 4px solid #3590d2;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.edu-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.edu-header h5 {
+  margin: 0;
+  font-size: 14px;
+  color: #3590d2;
+  font-weight: 600;
+}
+
+.edu-title h4 {
+  margin: 5px 0 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* RESPONSIVE: layout affiancato su schermi grandi */
+@media screen and (min-width: 768px) {
+  .edu-entry {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .edu-header {
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 200px;
+  }
+
+  .edu-title {
+    flex: 1;
+    padding-left: 15px;
+  }
+}
+
+/* interessi */
+
+.section-title {
+  border-left: 4px solid #ff8bb3;
+  padding-left: 10px;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+ul.interest {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 0;
+}
+
+ul.interest li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  list-style: none;
+  color: #333;
+}
+
+ul.interest li .icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: #3590d2;
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul.interest li .icon ion-icon {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 0;
+}
+
+
+/* skills */
+
+.about.skills .box {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.about.skills h2 {
+  border-left: 4px solid #ff8bb3;
+  padding-left: 10px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.about.skills .box h4 {
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.about.skills .percent {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #e3e3e3;
+}
+
+.about.skills .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #3590d2;
+}
+
+@media (max-width: 768px) {
+  .about.skills .box {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}

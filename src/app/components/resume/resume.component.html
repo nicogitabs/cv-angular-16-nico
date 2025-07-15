@@ -1,0 +1,148 @@
+<div class="container text-center">
+    <button (click)="downloadFile()" class="btn btn-primary mb-5 shadow border">Download Riepilogo PDF</button>
+    <div class="pb-2">
+        <accordion [isAnimated]="true" class="shadow">
+            <!-- applico two-way data binding cosi il menu si associa contemporaneamente alla variabile ogni volta che clicco cosi sono sincronizzati -->
+            <accordion-group [(isOpen)]="isInteressiOpen">
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;">></div>
+                    <div class="btn-link">Interessi</div>
+
+                    <div style="width: 10.95px;">
+                        <!-- menu che si apre stile carrello in base variabile is...open e mostro con ngif -->
+                        <div *ngIf="!isInteressiOpen" style="color: white;">></div>
+                        <div *ngIf="isInteressiOpen" style="color: white;">&#8595;</div>
+                    </div>
+                </button>
+                <div class="about interests">
+                    <h2 class="section-title">Interessi</h2>
+                    <ul class="interest">
+                        <li *ngFor="let interest of interests">
+                            <span class="icon">
+                                <ion-icon [name]="interest.icon"></ion-icon>
+                            </span>
+                            {{ interest.label }}
+                        </li>
+                    </ul>
+                </div>
+            </accordion-group>
+
+            <accordion-group [(isOpen)]="isLingueOpen">
+
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;">></div>
+                    <div class="btn-link">Lingue</div>
+
+                    <div style="width: 10.95px;">
+                        <!-- menu che si apre stile carrello in base variabile is...open e mostro con ngif -->
+                        <div *ngIf="!isLingueOpen" style="color: white;">></div>
+                        <div *ngIf="isLingueOpen" style="color: white;">&#8595;</div>
+                    </div>
+                </button>
+
+
+
+                <div class="about language">
+                    <h2 class="section-title">Lingue</h2>
+
+                    <div class="lang-entry" *ngFor="let lang of languages">
+                        <span class="text">{{ lang.nome }}</span>
+                        <div class="percent-bar">
+                            <div class="fill" [style.width]="lang.percent + '%'"></div>
+                        </div>
+                    </div>
+                </div>
+            </accordion-group>
+            <accordion-group [(isOpen)]="isEsperienzeOpen">
+
+
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;">></div>
+                    <div class="btn-link">Esperienze</div>
+
+                    <div style="width: 10.95px;">
+                        <!-- menu che si apre stile carrello in base variabile is...open e mostro con ngif -->
+                        <div *ngIf="!isEsperienzeOpen" style="color: white;">></div>
+                        <div *ngIf="isEsperienzeOpen" style="color: white;">&#8595;</div>
+                    </div>
+                </button>
+
+
+
+
+
+                <div class="about experience">
+                    <h2 class="section-title">Esperienze Lavorative</h2>
+
+                    <div class="exp-entry" *ngFor="let exp of experienceList">
+                        <div class="exp-header">
+                            <h5>{{ exp.periodo }}</h5>
+                            <h5>{{ exp.azienda }}</h5>
+                        </div>
+                        <div class="exp-body">
+                            <h4>{{ exp.ruolo }}</h4>
+                            <p>{{ exp.descrizione }}</p>
+                        </div>
+                    </div>
+                </div>
+            </accordion-group>
+            <accordion-group [(isOpen)]="isFormazioneOpen">
+
+
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;">></div>
+                    <div class="btn-link">Formazione</div>
+
+                    <div style="width: 10.95px;">
+                        <!-- menu che si apre stile carrello in base variabile is...open e mostro con ngif -->
+                        <div *ngIf="!isFormazioneOpen" style="color: white;">></div>
+                        <div *ngIf="isFormazioneOpen" style="color: white;">&#8595;</div>
+                    </div>
+                </button>
+
+
+
+                <div class="about education">
+                    <h2 class="section-title">Istruzione e Formazione</h2>
+
+                    <div class="edu-entry" *ngFor="let edu of educationList">
+                        <div class="edu-header">
+                            <h5>{{ edu.periodo }}</h5>
+                            <h5>{{ edu.ente }}</h5>
+                        </div>
+                        <div class="edu-title">
+                            <h4>{{ edu.titolo }}</h4>
+                        </div>
+                    </div>
+                </div>
+            </accordion-group>
+            <accordion-group [(isOpen)]="isSkillsOpen">
+
+
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;">></div>
+                    <div class="btn-link">Skills</div>
+
+                    <div style="width: 10.95px;">
+                        <!-- menu che si apre stile carrello in base variabile is...open e mostro con ngif -->
+                        <div *ngIf="!isSkillsOpen" style="color: white;">></div>
+                        <div *ngIf="isSkillsOpen" style="color: white;">&#8595;</div>
+                    </div>
+                </button>
+
+                <div class="about skills">
+                    <h2>Professional Skills</h2>
+
+                    <div class="box" *ngFor="let skill of skills">
+                        <h4>{{ skill.name }}</h4>
+                        <span class="percent">
+                            <div [style.width]="skill.level + '%'"></div>
+                        </span>
+                    </div>
+                </div>
+            </accordion-group>
+        </accordion>
+
+    </div>
+
+</div>
