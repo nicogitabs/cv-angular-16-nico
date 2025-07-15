@@ -1,27 +1,65 @@
-# PortfolioCvNicoloAbsolor
+# 💼 Portfolio CV – Nicolò Corpuz Absolor
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+Benvenuto nel mio portfolio personale, sviluppato con **Angular 16**.  
+Questa applicazione mostra le mie competenze tecniche, progetti realizzati e informazioni di contatto, in un'interfaccia responsive e moderna.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Tecnologie utilizzate
 
-## Code scaffolding
+- **Angular 16** – Framework principale
+- **TypeScript** – Linguaggio base per componenti e servizi
+- **HTML5 + CSS3** – Struttura e stile
+- **Bootstrap (ngx-bootstrap)** – Interfacce dinamiche e responsive
+- **Font Awesome + Ionicons** – Icone personalizzate
+- **Git + GitHub** – Versionamento e repository
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🧩 Architettura del Progetto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- `components/` – Componenti principali: navbar, home, resume, portfolio, contacts
+- `models/` – Interfacce personalizzate (`Skill`, `Language`, `Project`, etc.)
+- `services/` – Servizi Angular per iniettare dati tramite dependency injection
+- `pipes/` – Pipe custom per formattare dinamicamente i contenuti
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 📁 Sezioni principali
 
-## Running end-to-end tests
+### 🏠 Home
+- Benvenuto e presentazione professionale
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 💼 Portfolio
+- Progetti divisi per tecnologia (HTML, CSS, JS, Spring, ecc.)
+- Filtrabili tramite tag
+- Modale per dettagli aggiuntivi
 
-## Further help
+### 📜 Resume
+- Esperienze, skills, formazione, lingue
+- Dati iniettati tramite `resume-data.service.ts`
+- Download del CV in PDF
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### 📬 Contacts
+- Informazioni personali con link a GitHub, LinkedIn, YouTube
+- Dati gestiti via `contact-data.service.ts`
+- Pipe `url-to-label` per migliorare leggibilità
+
+---
+
+## 🧠 Approfondimenti tecnici
+
+- **Data Binding** con `{{}}` e `[property]`
+- **Routing** con `AppRoutingModule`
+- **Servizi (`@Injectable`)** per separare logica dai componenti
+- **Interfacce** per tipizzare i dati
+- **Responsività** gestita con media queries e `ngx-bootstrap`
+- **GitHub Integration** e deploy semplificato
+
+---
+
+## 🧪 Esecuzione progetto in locale
+
+```bash
+npm install       # installa le dipendenze
+ng serve          # avvia il server locale su http://localhost:4200
